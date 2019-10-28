@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="316.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NewSessionController">
+   <children>
+      <TitledPane animated="false" prefHeight="400.0" prefWidth="600.0" text="untitled" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="295.0" prefWidth="598.0">
+               <children>
+                  <VBox prefHeight="375.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Text>
+                        <TextField fx:id="nameField">
+                           <VBox.margin>
+                              <Insets bottom="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Separator prefWidth="200.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Symmetric Key" wrappingWidth="188.28203582763672" />
+                        <TextArea fx:id="symmetricKeyField" prefHeight="87.0" prefWidth="579.0">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <HBox prefHeight="31.0" prefWidth="579.0">
+                           <children>
+                              <ComboBox fx:id="symEncryptionTypeDropdown" onAction="#setSymKeyLengths" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="symEncryptionLengthDropDown" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Button fx:id="generateKeyButton" mnemonicParsing="false" onAction="#generateSymmetricKey" text="Generate" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First index" />
+                        <TextField fx:id="firstIndexTextField" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First tag" />
+                        <HBox prefHeight="44.0" prefWidth="579.0">
+                           <children>
+                              <TextField fx:id="firstTagTextField" prefHeight="25.0" prefWidth="422.0">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin></TextField>
+                              <ComboBox fx:id="hashingAlgorithmDropDown" prefWidth="150.0" />
+                           </children>
+                        </HBox>
+                      <Button fx:id="indexAndTagGenerateButton" mnemonicParsing="false" onAction="#generateTagAndIndex" text="Generate index and tag">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin></Button>
+                        <Separator prefWidth="200.0" />
+                        <ButtonBar prefHeight="40.0" prefWidth="600.0">
+                           <buttons>
+                              <Button fx:id="createSessionButton" mnemonicParsing="false" onAction="#createSession" text="Create Session" />
+                           </buttons>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </ButtonBar>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

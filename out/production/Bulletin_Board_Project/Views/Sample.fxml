@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="1054.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+    <children>
+          <VBox prefHeight="515.0" prefWidth="981.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                  <MenuBar prefHeight="26.0" prefWidth="981.0">
+                      <menus>
+                          <Menu mnemonicParsing="false" text="Create">
+                              <items>
+                                  <MenuItem fx:id="createSessionItem" mnemonicParsing="false" onAction="#openCreateSessionInstance" text="Create Session" />
+                        <MenuItem fx:id="createName" mnemonicParsing="false" onAction="#setName" text="Set Name" />
+                              </items>
+                          </Menu>
+                          <Menu mnemonicParsing="false" text="Edit">
+                              <items>
+                                  <MenuItem mnemonicParsing="false" text="Delete" />
+                              </items>
+                          </Menu>
+                          <Menu mnemonicParsing="false" text="Help">
+                              <items>
+                                  <MenuItem mnemonicParsing="false" text="About" />
+                              </items>
+                          </Menu>
+                      </menus>
+                  </MenuBar>
+                  <TabPane fx:id="tabPane" prefHeight="583.0" prefWidth="1054.0" tabClosingPolicy="UNAVAILABLE">
+                      <tabs>
+                          <Tab text="Untitled Tab 1">
+                              <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="547.0" prefWidth="1023.0">
+                                      <children>
+                              <VBox layoutX="8.0" prefHeight="549.0" prefWidth="1034.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                                <TextArea fx:id="messagesTextField" prefHeight="490.0" prefWidth="1034.0">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                    <Separator prefWidth="200.0" />
+                                                <HBox prefHeight="25.0" prefWidth="867.0">
+                                                    <children>
+                                                        <Text fx:id="nameTextField" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="68.99383544921875">
+                                             <HBox.margin>
+                                                <Insets top="5.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                                        <TextField fx:id="insertTextField" prefHeight="25.0" prefWidth="798.0" />
+                                                        <Button fx:id="sendButton" mnemonicParsing="false" onAction="#sendMessage" prefHeight="25.0" prefWidth="72.0" text="Send">
+                                                            <HBox.margin>
+                                                                <Insets left="10.0" />
+                                                            </HBox.margin>
+                                                        </Button>
+                                          <Button fx:id="receiveButton" mnemonicParsing="false" onAction="#receiveMessage" prefHeight="25.0" prefWidth="73.0" text="Receive">
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                                    </children>
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="10.0" />
+                                       </VBox.margin>
+                                                </HBox>
+                                 </children>
+                              </VBox>
+                                      </children>
+                                  </AnchorPane>
+                              </content>
+                          </Tab>
+                      </tabs>
+                  </TabPane>
+              </children>
+          </VBox>
+    </children>
+</AnchorPane>

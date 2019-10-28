@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<Tab text="Untitled Tab 1" xmlns:fx="http://javafx.com/fxml/1">
+    <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="547.0" prefWidth="1023.0">
+            <children>
+                <VBox layoutX="8.0" prefHeight="549.0" prefWidth="1034.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <TextArea fx:id="messageTextField" prefHeight="490.0" prefWidth="1034.0">
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </TextArea>
+                        <Separator prefWidth="200.0" />
+                        <HBox prefHeight="25.0" prefWidth="867.0">
+                            <children>
+                                <Text fx:id="nameTextField" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="68.99383544921875">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Text>
+                                <TextField fx:id="insertTextField" prefHeight="25.0" prefWidth="798.0" />
+                                <Button fx:id="sendButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Send">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="5.0" top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </content>
+</Tab>
